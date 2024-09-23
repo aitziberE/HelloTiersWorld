@@ -11,7 +11,7 @@ import model.User;
  *
  * @author Aitziber
  */
-public class DBUsarDataAccessor implements DataAccessible{
+public class DBUserDataAccessor implements DataAccessible{
 
     @Override
     public User getUserData() {
