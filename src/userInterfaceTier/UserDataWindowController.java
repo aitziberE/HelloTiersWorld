@@ -31,6 +31,7 @@ public class UserDataWindowController implements Initializable {
                label.setText("user not found");
            } else {
                label.setText(user.toString());
+               //label.setDisable(true);
            }   
         }
         catch (Exception e){
@@ -41,7 +42,5 @@ public class UserDataWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         label.setText("Click to get user data");
-        label.setDisable(true);
     }    
-    
 }

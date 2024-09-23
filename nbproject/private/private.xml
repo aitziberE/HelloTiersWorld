@@ -7,8 +7,12 @@
             <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/dataAccessTier/DataAccessible.java</file>
             <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/userInterfaceTier/UserDataWindowController.java</file>
             <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/model/User.java</file>
+            <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/config/userData.properties</file>
+            <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/config/properties.properties</file>
             <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/dataAccessTier/FileUserDataAccessor.java</file>
+            <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/userInterfaceTier/UserDataView.fxml</file>
             <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/dataAccessTier/DBUserDataAccessor.java</file>
+            <file>file:/C:/Users/Aitziber/Documents/NetBeansProjects/HelloTiersWorld/src/userInterfaceTier/Application.java</file>
         </group>
     </open-files>
 </project-private>

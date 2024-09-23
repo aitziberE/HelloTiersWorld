@@ -15,7 +15,7 @@ import model.User;
  * @author Aitziber
  */
 public class FileUserDataAccessor implements DataAccessible{
-   private static final ResourceBundle USER_DATA = ResourceBundle.getBundle("userData");
+   private static final ResourceBundle USER_DATA = ResourceBundle.getBundle("config.userData");
     @Override
     public User getUserData() {
         User user= new User();

@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
  * @author Aitziber
  */
 public class UserManagerFactory {
-        private static final String DATA_SOURCE = ResourceBundle.getBundle("properties").getString("DATA_SOURCE");
+        private static final String DATA_SOURCE = ResourceBundle.getBundle("config.properties").getString("DATA_SOURCE");
         
     public static DataAccessible getDataAccessible() {
         switch (DATA_SOURCE) {
