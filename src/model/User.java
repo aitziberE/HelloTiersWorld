@@ -100,7 +100,4 @@ public class User {
     public String toString() {
         return "User{" + "firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName + ", dni=" + dni + ", email=" + email + ", bithDate=" + bithDate + '}';
     }
-    
-    
-    
 }
