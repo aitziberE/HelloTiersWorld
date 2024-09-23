@@ -12,7 +12,5 @@ import model.User;
  * @author Aitziber
  */
 public interface DataAccessible {
-    public User getUserData();
-    
-//     throws Exception;
+    public User getUserData() throws Exception;
 }

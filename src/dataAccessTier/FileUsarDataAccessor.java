@@ -5,6 +5,9 @@
  */
 package dataAccessTier;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ResourceBundle;
 import model.User;
 
 /**
@@ -12,13 +15,23 @@ import model.User;
  * @author Aitziber
  */
 public class FileUsarDataAccessor implements DataAccessible{
-
+   private static final ResourceBundle USER_DATA = ResourceBundle.getBundle("userData");
     @Override
     public User getUserData() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        User user= new User();
+       
+        user.setFirstName(USER_DATA.getString("firstName"));
+        user.setLastName(USER_DATA.getString("lastName"));
+        user.setUserName(USER_DATA.getString("userName"));
+        user.setDni(USER_DATA.getString("dni"));
+        user.setEmail(USER_DATA.getString("email"));
+
+        String birthDateString = USER_DATA.getString("birthDate");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate birthDate = LocalDate.parse(birthDateString, formatter);
+        user.setBithDate(birthDate);
+        user.setPassword(USER_DATA.getString("password"));
+        
+        return user;
     }
-//    getBundle()
-//    getString()
-//    estos dos tienen los dos exceptiones de runtime así que como no son checkeadas el throws exception te sirve para todo
-//    te miras la documentación, buscas el método dentro de la clase y miras si produce excepciones no checkeadas, aka que no extienden de runtimeException. esas hay que illarlas.
 }

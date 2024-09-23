@@ -21,6 +21,10 @@ public class User {
     private LocalDate bithDate;
     private String password;
     
+    public User(){
+        
+    }
+    
     public User (String firstName, String lastName, String userName, String dni, String email, LocalDate bithDate, String password){
         
         this.firstName=firstName;

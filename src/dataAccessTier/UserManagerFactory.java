@@ -5,10 +5,22 @@
  */
 package dataAccessTier;
 
+import java.util.ResourceBundle;
 /**
  *
  * @author Aitziber
  */
 public class UserManagerFactory {
-    
+        private static final String DATA_SOURCE = ResourceBundle.getBundle("properties").getString("DATA_SOURCE");
+        
+    public static DataAccessible getUserData() {
+        switch (DATA_SOURCE) {
+            case "db":
+                return new DBUserDataAccessor();
+            case "file":
+                return new FileUserDataAccessor();
+            default:
+                throw new IllegalArgumentException("Invalid data source: " + DATA_SOURCE);
+        }
+    }
 }
