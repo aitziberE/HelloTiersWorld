@@ -13,13 +13,14 @@ import java.util.ResourceBundle;
 public class UserManagerFactory {
         private static final String DATA_SOURCE = ResourceBundle.getBundle("properties").getString("DATA_SOURCE");
         
-    public static DataAccessible getUserData() {
+    public static DataAccessible getDataAccessible() {
         switch (DATA_SOURCE) {
             case "db":
                 return new DBUserDataAccessor();
             case "file":
                 return new FileUserDataAccessor();
             default:
+                // LOGGER
                 throw new IllegalArgumentException("Invalid data source: " + DATA_SOURCE);
         }
     }

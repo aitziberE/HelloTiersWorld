@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package userInterfaceTier;
-
-//import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,9 +17,7 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("UserDataView.fxml"));
-        
-//        hacer que el campo de texto no sea editable 
-                
+                       
         Scene scene = new Scene(root);
         
         stage.setScene(scene);

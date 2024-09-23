@@ -5,12 +5,14 @@
  */
 package userInterfaceTier;
 
+import dataAccessTier.UserManagerFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import model.User;
 
 /**
  *
@@ -24,21 +26,22 @@ public class UserDataWindowController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         try{
-           User user = UserManagerFactory getDataAccessible().getUserData();
-           System.out.println("You clicked me!");
-            label.setText("Hello World!");
-            label.setDisable(true);
+           User user = UserManagerFactory.getDataAccessible().getUserData();
+           if (user == null){
+               label.setText("user not found");
+           } else {
+               label.setText(user.toString());
+           }   
         }
-        catch{
-            
+        catch (Exception e){
+            // LOGGER e
         }
-        
-
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        label.setText("Click to get user data");
+        label.setDisable(true);
     }    
     
 }
