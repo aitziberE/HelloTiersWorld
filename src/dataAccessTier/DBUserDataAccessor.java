@@ -24,7 +24,7 @@ public class DBUserDataAccessor implements DataAccessible{
         Connection con = null;
         try {
             String url = "jdbc:mysql://localhost:3306/hellotiersdb?serverTimezone=Europe/Madrid&useSSL=false";
-            con = DriverManager.getConnection(url, "root", "");
+            con = DriverManager.getConnection(url, "root", "abcd*1234");
         } catch (SQLException e) {
             // LOGGER: System.out.println("Error al intentar abrir la BD");
         }
@@ -68,7 +68,7 @@ public class DBUserDataAccessor implements DataAccessible{
                 
                 // refactorizar
                 if (sqlDate != null) {
-                    user.setBithDate(sqlDate.toLocalDate());
+                    user.setBirthDate(sqlDate.toLocalDate());
                 }
                 
                 user.setPassword(rs.getString("password"));

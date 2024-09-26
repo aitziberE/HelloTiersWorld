@@ -6,11 +6,11 @@
 package userInterfaceTier;
 
 import dataAccessTier.UserManagerFactory;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.logging.Logger;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import model.User;
 
@@ -18,7 +18,7 @@ import model.User;
  *
  * @author Aitziber
  */
-public class UserDataWindowController implements Initializable {
+public class UserDataWindowController {
     
     @FXML
     private Label label;
@@ -31,16 +31,11 @@ public class UserDataWindowController implements Initializable {
                label.setText("user not found");
            } else {
                label.setText(user.toString());
-               //label.setDisable(true);
            }   
         }
         catch (Exception e){
-            // LOGGER e
+            Logger.getLogger("UserDataWindowController").severe(e.getLocalizedMessage());
+            new Alert(Alert.AlertType.ERROR, e.getLocalizedMessage(), ButtonType.OK).showAndWait();
         }
     }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        label.setText("Click to get user data");
-    }    
 }
