@@ -31,11 +31,6 @@ import java.util.logging.Level;
 public class FileUserDataAccessor implements DataAccessible{
     
     /**
-    * ResourceBundle that holds the user data properties loaded from the {@code config.userData} file.
-    */
-    private static final ResourceBundle USER_DATA = ResourceBundle.getBundle("config.userData");
-
-    /**
     * Fetches user data from the properties file and returns it as a {@code User} object.
     * 
     * This method reads user attributes such as first name, last name, username, DNI, email, birth
@@ -48,6 +43,8 @@ public class FileUserDataAccessor implements DataAccessible{
     */
     @Override
     public User getUserData() {
+        
+        ResourceBundle USER_DATA = ResourceBundle.getBundle("config.userData");
         
         Logger.getLogger("FileUserDataAccessor").info("Fetching user data from file");        
         User user= new User();
